@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+</LinearLayout>
+
+    <!-- res/layout/fragment_programs.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/programs_recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+<!-- res/layout/item_program.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/program_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Program Name"
+        android:textSize="16sp" />
+</LinearLayout>
