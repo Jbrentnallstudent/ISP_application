@@ -8,13 +8,13 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/nav_graph"
-        app:startDestination="@id/navigation_dashboard">
+        app:startDestination="@id/navigation_mainactivity">
 
         <fragment
-            android:id="@+id/navigation_dashboard"
-            android:name="com.android.isp_application.FragmentDashboard"
-            android:label="Dashboard"
-            tools:layout="@layout/fragment_dashboard" />
+            android:id="@+id/navigation_activity_main"
+            android:name="com.android.isp_application.activity_main"
+            android:label="Main Activity"
+            tools:layout="@layout/activity_main" />
 
         <fragment
             android:id="@+id/navigation_home"

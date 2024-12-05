@@ -1,25 +1,29 @@
 package com.android.isp_application;
 
 import android.os.Bundle;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment
 
-public class TransitInfo extends FragmentDashboard{
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            WebView webView = new WebView(getContext());
-            webView.getSettings().setJavaScriptEnabled(true);
-            webView.setWebViewClient(new WebViewClient());
-            webView.loadUrl("https://metrobus.ca");
-            return webView;
-        }
+public class TransitInfo extends Home {
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View root = inflater.inflate(R.layout.fragment_transitinfo, container, false);
+
+        WebView webView = root.findViewById(R.id.transit_info);
+        webView.setWebViewClient(new WebViewClient());
+
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
+        webView.loadUrl("https://www.metrobus.com");
+
+        return root;
     }
-
 }

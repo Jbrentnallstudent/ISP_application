@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-public class Dashboard extends AppCompatActivity {
+
+
+
+public class Home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,10 @@ public class Dashboard extends AppCompatActivity {
                 case R.id.navigation_info:
                     selectedFragment = new InfoFragment(); // Replace with your Info Fragment
                     break;
+                case R.id.navigation_transit:
+                    selectedFragment = new fragment_transitinfo();
+                    break;
+
             }
 
             // Replace the current fragment with the selected one
