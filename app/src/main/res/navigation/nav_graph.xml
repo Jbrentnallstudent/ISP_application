@@ -1,30 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
-
-    <?xml version="1.0" encoding="utf-8"?>
-    <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/nav_graph"
-        app:startDestination="@id/navigation_mainactivity">
-
-        <fragment
-            android:id="@+id/navigation_activity_main"
-            android:name="com.android.isp_application.activity_main"
-            android:label="Main Activity"
-            tools:layout="@layout/activity_main" />
-
-        <fragment
-            android:id="@+id/navigation_home"
-            android:name="com.android.isp_application.HomeFragment"
-            android:label="Home"
-            tools:layout="@layout/fragment_home" />
-
-        <fragment
-            android:id="@+id/navigation_notifications"
-            android:name="com.android.isp_application.NotificationsFragment"
-            android:label="Notifications"
-            tools:layout="@layout/fragment_notifications" />
-    </navigation>
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginActivity">
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.android.isp_application.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+</navigation>
