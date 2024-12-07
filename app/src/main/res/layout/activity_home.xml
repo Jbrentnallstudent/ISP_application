@@ -25,9 +25,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/titleHome"
-        android:layout_margin="20dp"
+        android:padding="16dp"
         android:columnCount="2"
-        android:rowCount="4">
+        android:rowCount="4"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardPrograms"
@@ -50,8 +51,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/programs_256" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -84,8 +85,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/date_256" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -118,8 +119,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/calendar_256" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -152,8 +153,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/bus_256" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -186,8 +187,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/news_256" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -220,8 +221,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/contacts_256" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -254,13 +255,13 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/information_256" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="INFORMATION"
+                    android:text="INFO"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textStyle="bold"/>
@@ -288,8 +289,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/logout_256" />
                 <TextView
                     android:layout_width="wrap_content"
