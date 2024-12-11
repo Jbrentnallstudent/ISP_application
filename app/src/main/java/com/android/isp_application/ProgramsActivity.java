@@ -10,11 +10,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,7 +27,7 @@ public class ProgramsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_programs);
         expandableListView = (ExpandableListView) findViewById(R.id.lvProgram);
-        myHeader = DataProvider.getInfo();
+        myHeader = ProgramDataProvider.getInfo();
         myChild = new ArrayList<>(myHeader.keySet());
         adapter = new MyAdapter(this, myHeader,myChild);
         expandableListView.setAdapter(adapter);

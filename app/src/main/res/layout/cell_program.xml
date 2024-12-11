@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:text="This is a ReaderView"
         android:id="@+id/idTitle"
+        android:textColor="@color/white"
         style="@style/TextAppearance.AppCompat.Large"
         android:padding="2dp"
         android:paddingLeft="6dp"/>
