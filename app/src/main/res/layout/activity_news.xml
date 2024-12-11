@@ -3,6 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
 
@@ -16,15 +17,12 @@
         android:textColor="@color/white"
         android:text="Recent News" />
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:indeterminate="true"
-        android:id="@+id/news_progressbar"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNews"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/news_recycler_view"/>
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:listitem="@layout/news_cell" />
 
 </LinearLayout>
