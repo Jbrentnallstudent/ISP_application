@@ -17,6 +17,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class ScheduleActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private DaoDatabase db;
+    private ScheduleAdapter adapter;
+    private List<ScheduleEntity> scheduleList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,10 @@ public class ScheduleActivity extends AppCompatActivity {
 
         // Fetch data and bind adapter
         setupRecyclerView();
+        // Populate the database with test data
+        populateTestData();
+        // Fetch and display schedule data
+        fetchScheduleData();
     }
 
     private void setupRecyclerView() {
@@ -42,4 +48,26 @@ public class ScheduleActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
+    private void populateTestData() {
+        // Adding test schedule data
+        ScheduleEntity schedule1 = new ScheduleEntity("2024-12-10", "Software Engineering Exam", "10:00 AM");
+        ScheduleEntity schedule2 = new ScheduleEntity("2024-12-12", "Embedded Controller Presentation", "2:00 PM");
+        ScheduleEntity schedule3 = new ScheduleEntity("2024-12-15", "Active Circuits Lecture", "9:00 AM");
+        ScheduleEntity schedule4 = new ScheduleEntity("2024-12-20", "Project Submission Deadline", "11:59 PM");
+
+        // Insert test schedule data into the database
+        db.scheduleDao().insertEvent(schedule1);
+        db.scheduleDao().insertEvent(schedule2);
+        db.scheduleDao().insertEvent(schedule3);
+        db.scheduleDao().insertEvent(schedule4);
+    }
+
+    private void fetchScheduleData() {
+        // Fetch schedule data from the database
+        scheduleList = db.scheduleDao().getAllEvents();
+
+        // Initialize and set the adapter
+        adapter = new ScheduleAdapter(scheduleList);
+        recyclerView.setAdapter(adapter);
+    }
 }
