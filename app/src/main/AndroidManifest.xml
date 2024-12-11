@@ -23,15 +23,7 @@
         android:theme="@style/Theme.ISP_application"
         android:usesCleartextTraffic="true"
         tools:targetApi="26">
-        <activity
-            android:name=".ProgramActivityAdapter"
-            android:exported="false" />
-        <activity
-            android:name=".NewsActivityAdapter"
-            android:exported="false" />
-        <activity
-            android:name=".ScheduleActivityAdapter"
-            android:exported="false" />
+
         <activity
             android:name=".LocationActivity"
             android:exported="false" />

@@ -6,4 +6,12 @@
     <string name="event_name">Event Name</string>
     <string name="map_view_description">Map showing current location</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="Week">
+        <item> Monday </item>
+        <item> Tuesday </item>
+        <item> Wednesday </item>
+        <item> Thursday </item>
+        <item> Friday </item>
+    </string-array>
 </resources>
